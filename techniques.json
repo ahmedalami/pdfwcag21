@@ -1,0 +1,832 @@
+[
+  {
+    "id": "PDF1",
+    "title": "Applying text alternatives to images with the Alt entry in PDF documents",
+    "applicability": "Tagged PDF documents with imagesThis technique relates to Success Criterion 1.1.1: Non-text Content (Sufficient).\n            ",
+    "successCriterion": [
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/non-text-content",
+        "title": "Non-text Content",
+        "section": "1.1.1",
+        "status": "Sufficient"
+      }
+    ],
+    "description": [
+      "The objective of this technique is to provide text alternatives for images via an /Alt entry in the property list for a Tag. This is normally accomplished using a tool for authoring PDF.",
+      "PDF documents may be enhanced by providing alternative descriptions for images, formulas, and other items that do not translate naturally into text. In fact, such text alternatives are required for accessibility: alternate descriptions are human-readable text that can be vocalized by text-to-speech technology for the benefit of users with vision disabilities.",
+      "When an image contains words that are important to understanding the content, the text alternative should include those words. This will allow the alternative to accurately represent the image. Note that it does not necessarily describe the visual characteristics of the image itself but must convey the same meaning as the image."
+    ],
+    "techniques": [
+      {
+        "id": "G94",
+        "title": "Providing short text alternative for non-text content that serves the same purpose and presents the same information as the non-text content",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G94"
+      }
+    ]
+  },
+  {
+    "id": "PDF2",
+    "title": "Creating bookmarks in PDF documents",
+    "applicability": "Tagged PDF documentsThis technique relates to Success Criterion 2.4.5: Multiple Ways (Sufficient when used with an unwritten technique).\n            ",
+    "successCriterion": [
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/multiple-ways",
+        "title": "Multiple Ways",
+        "section": "2.4.5",
+        "status": "Sufficient when used with an unwritten technique"
+      }
+    ],
+    "description": [
+      "The intent of this technique is to make it possible for users to locate content using bookmarks (outline entries in an Outline dictionary) in long documents.",
+      "A person with cognitive disabilities may prefer a hierarchical outline that provides an overview of the document rather than reading and traversing through many pages. This is also a conventional means of navigating a document that benefits all users."
+    ],
+    "techniques": [
+      {
+        "id": "G64",
+        "title": "Providing a Table of Contents",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G64"
+      }
+    ]
+  },
+  {
+    "id": "PDF3",
+    "title": "Ensuring correct tab and reading order in PDF documents",
+    "applicability": "Tagged PDF documentsThis technique relates to:",
+    "successCriterion": [
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/meaningful-sequence",
+        "title": "Meaningful Sequence",
+        "section": "1.3.2",
+        "status": "Sufficient"
+      },
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/keyboard",
+        "title": "Keyboard",
+        "section": "2.1.1",
+        "status": "Sufficient when used with an unwritten technique"
+      },
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/focus-order",
+        "title": "Focus Order",
+        "section": "2.4.3",
+        "status": "Sufficient when used with an unwritten technique"
+      }
+    ],
+    "description": [
+      "The intent of this technique is to ensure that users can navigate through content in a logical order that is consistent with the meaning of the content. Correct tab and reading order is typically accomplished using a tool for authoring PDF.",
+      "For sighted users, the logical order of PDF content is also the visual order on the screen. For keyboard and assistive technology users, the tab order through content, including interactive elements (form fields and links), determines the order in which these users can navigate the content. The tab order must reflect the logical order of the document.",
+      "Logical structure is created when a document is saved as tagged PDF. The reading order of a PDF document is determined primarily by the tag order of document elements, including interactive elements, but the order of content within individual tags is determined by the PDF document’s content tree structure.",
+      "If the reading order is not correct, keyboard and assistive technology users may not be able to understand the content. For example, some documents use multiple columns, and the reading order is clear visually to sighted users as flowing from the top to the bottom of the first column, then to the top of the next column. But if the document is not properly tagged, a screen reader may read the document from top to bottom, across both columns, interpreting them as one column.",
+      "The simplest way to ensure correct reading order is to structure the document correctly in the authoring tool used to create the document, before conversion to tagged PDF. Note, however, that pages with complex layouts with graphics, tables, footnotes, side-bars, form fields, and other elements may not convert to tagged PDF in the correct reading order. These inconsistencies must then be corrected with repair tools such as Acrobat Pro.",
+      "When a PDF document containing form fields has a correct reading order, all form fields are contained in the tab order in the appropriate order, and in the correct order relative to other content in the PDF. Common tab-order errors include:"
+    ],
+    "techniques": [
+      {
+        "id": "G57",
+        "title": "Ordering the content in a meaningful sequence",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G57"
+      },
+      {
+        "id": "G59",
+        "title": "Placing the interactive elements in an order that follows sequences and relationships within the content",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G59"
+      },
+      {
+        "id": "G202",
+        "title": "Ensuring keyboard control for all functionality",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G202"
+      }
+    ]
+  },
+  {
+    "id": "PDF4",
+    "title": "Hiding decorative images with the Artifact tag in PDF documents",
+    "applicability": "Tagged PDF documentsThis technique relates to Success Criterion 1.1.1: Non-text Content (Sufficient).\n            ",
+    "successCriterion": [
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/non-text-content",
+        "title": "Non-text Content",
+        "section": "1.1.1",
+        "status": "Sufficient"
+      }
+    ],
+    "description": [
+      "The purpose of this technique is to show how purely decorative images in PDF documents can be marked so that they can be ignored by Assistive Technology by using the /Artifact tag. This is typically accomplished by using a tool for authoring PDF.",
+      "In PDF, artifacts are generally graphics objects or other markings that are not part of the authored content. Examples of artifacts include page header or footer information, lines or other graphics separating sections of the page, or decorative images."
+    ],
+    "techniques": []
+  },
+  {
+    "id": "PDF5",
+    "title": "Indicating required form controls in PDF forms",
+    "applicability": "Tagged PDF documents with formsThis technique relates to:",
+    "successCriterion": [
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/error-identification",
+        "title": "Error Identification",
+        "section": "3.3.1",
+        "status": "Sufficient"
+      },
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions",
+        "title": "Labels or Instructions",
+        "section": "3.3.2",
+        "status": "Sufficient when used with G131: Providing descriptive labels"
+      },
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion",
+        "title": "Error Suggestion",
+        "section": "3.3.3",
+        "status": "Sufficient"
+      }
+    ],
+    "description": [
+      "The objective of this technique is to notify the user when a field that must be completed has not been completed in a PDF form. Required fields are implemented using the /Ff entry in the form field's dictionary (see Table 220 in Section 12.7 (Interactive Forms) of PDF 1.7 (ISO 32000-1). This is normally accomplished using a tool for authoring PDF.",
+      "If errors are found, an alert dialog describes the nature of the error in text. This may be accomplished through scripting created by the author (see, for example, SCR18: Providing client-side validation and alert). User agents, such as Adobe Acrobat Pro and LiveCycle, can provide automatic alerts (as described in the examples below).",
+      "Note: once the user dismisses the alert dialog, it may be helpful if the script positions the keyboard focus on the field where the error occurred, although some users may expect the focus to remain on the last control focused prior to the alert appearing. Authors should exercise care to ensure that any movement of the focus will be expected. For example, if the alert announces a missing required phone number, positioning the focus on the phone number field when the alert is dismissed can be regarded as helpful and expected. In some cases, however, this may not be possible. If multiple input errors occur on the page, another approach must be taken to error reporting. (See, for example, the Adobe scripting resources.)",
+      "Ensuring that users are aware an error has occurred, can determine what is wrong, and can correct it are keys to software usability and accessibility. Meeting this objective helps ensure that all users can complete transactions with ease and confidence.",
+      "It is also important that users are aware that an error may occur. You can incorporate this information in labels; for example,   \"Date (required)\" or the use of a red asterisk to indicate required fields. (Make sure that a legend appears on each form with required fields, e.g., \"* = required field\".) See ."
+    ],
+    "techniques": [
+      {
+        "id": "G83",
+        "title": "Providing text descriptions to identify required fields that were not completed",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G83"
+      },
+      {
+        "id": "H90",
+        "title": "Indicating required form controls using label or legend",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/html/H90"
+      },
+      {
+        "id": "SCR18",
+        "title": "Providing client-side validation and alert",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR18"
+      },
+      {
+        "id": "PDF23",
+        "title": "Providing interactive form controls in PDF documents",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF23"
+      },
+      {
+        "id": "PDF10",
+        "title": "Providing labels for interactive form controls in PDF documents",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF10"
+      },
+      {
+        "id": "PDF22",
+        "title": "Indicating when user input falls outside the required format or values in PDF forms",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF22"
+      }
+    ]
+  },
+  {
+    "id": "PDF6",
+    "title": "Using table elements for table markup in PDF Documents",
+    "applicability": "Tagged PDF documents with tablesThis technique relates to Success Criterion 1.3.1: Info and Relationships (Sufficient when used with an unwritten technique).\n            ",
+    "successCriterion": [
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships",
+        "title": "Info and Relationships",
+        "section": "1.3.1",
+        "status": "Sufficient when used with an unwritten technique"
+      }
+    ],
+    "description": [
+      "The purpose of this technique is to show how tables in PDF documents can be marked up so that they are recognized by assistive technology. This is typically accomplished by using a tool for authoring PDF.",
+      "Tabular information must be presented in a way that preserves relationships within the information even when users cannot see the table or the presentation format is changed. Information is considered tabular when logical relationships among text, numbers, images, or other data exist in two dimensions (vertical and horizontal). These relationships are represented in columns and rows, and the columns and rows must be recognizable in order for the logical relationships to be perceived.",
+      "Tagged tables can be created using the Add Tags to Document feature in Adobe Acrobat, using the Object Library in Adobe LiveCycle, or converting tables to PDF from a third-party application, such as Microsoft Word. However, the resulting tables may not be tagged correctly and you should ensure that table tagging issues are resolved.",
+      "Within PDF documents, a table uses the following structure types for table elements:"
+    ],
+    "techniques": [
+      {
+        "id": "H51",
+        "title": "Using table markup to present tabular information",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/html/H51"
+      },
+      {
+        "id": "PDF20",
+        "title": "Using Adobe Acrobat Pro's Table Editor to repair mistagged tables",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF20"
+      }
+    ]
+  },
+  {
+    "id": "PDF7",
+    "title": "Performing OCR on a scanned PDF document to provide actual text",
+    "applicability": "Scanned PDF documentsThis technique relates to:",
+    "successCriterion": [
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/images-of-text",
+        "title": "Images of Text",
+        "section": "1.4.5",
+        "status": "Sufficient"
+      },
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/images-of-text-no-exception",
+        "title": "Images of Text",
+        "section": "1.4.9",
+        "status": "Sufficient"
+      }
+    ],
+    "description": [
+      "The intent of this technique is to ensure that visually rendered text is presented in such a manner that it can be perceived without its visual presentation interfering with its readability.",
+      "A document that consists of scanned images of text is inherently inaccessible because the content of the document is images, not searchable text. Assistive technologies cannot read or extract the words; users cannot select, edit, resize, or reflow text nor can they change text and background colors; and authors cannot manipulate the PDF for accessibility.",
+      "For these reasons, authors should use actual text rather than images of text, using an authoring tool such as Microsoft Word or Oracle Open Office to author and convert content to PDF.",
+      "If authors do not have access to the source file and authoring tool, scanned images of text can be converted to PDF using optical character recognition (OCR). Adobe Acrobat Pro can then be used to create accessible text."
+    ],
+    "techniques": [
+      {
+        "id": "G140",
+        "title": "Separating information and structure from presentation to enable different presentations",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G140"
+      }
+    ]
+  },
+  {
+    "id": "PDF8",
+    "title": "Providing definitions for abbreviations via an E entry for a structure\n         \t\t\telement\n      ",
+    "applicability": "Tagged PDF documents containing abbreviations or acronymsThis technique relates to Success Criterion 3.1.4: Abbreviations (Sufficient when used with G102: Providing the expansion or explanation of an abbreviation).\n            ",
+    "successCriterion": [
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/abbreviations",
+        "title": "AbbreviationsG102",
+        "section": "3.1.4",
+        "status": "Sufficient when used with G102: Providing the expansion or explanation of an abbreviation"
+      }
+    ],
+    "description": [
+      "The objective of this technique is to provide an expansion or definition of an abbreviation for the first occurrence of the abbreviation. For example, a reference to an abbreviation, such as   \"WCAG,\" should be available as   \"Web Content Accessibility Guidelines (WCAG)\" on its first occurrence in a document.",
+      "This is done by setting expansion text using an /E entry for a structure element, and is normally accomplished using a tool for authoring PDF. A Span structure element is typically used to tag the abbreviation, but the /E entry is valid with any structure element.",
+      "This technique is applicable for any abbreviation, including acronyms and initialisms. Note that on the first occurrence of the abbreviation, both the abbreviation and the expansion text must be provided. This will aid recognition of later use of the abbreviation.",
+      "PDF documents may be enhanced by providing expansions for abbreviations. In fact, such expansions are required for accessibility to ensure understanding by people who have difficulty decoding words; rely on screen magnification (which may obscure context); have limited memory; or who have difficulty using context to aid understanding."
+    ],
+    "techniques": [
+      {
+        "id": "G102",
+        "title": "Providing the expansion or explanation of an abbreviation",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G102"
+      },
+      {
+        "id": "G55",
+        "title": "Linking to definitions",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G55"
+      },
+      {
+        "id": "G62",
+        "title": "Providing a glossary",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G62"
+      },
+      {
+        "id": "G70",
+        "title": "Providing a function to search an online dictionary",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G70"
+      },
+      {
+        "id": "G97",
+        "title": "Providing the first use of an abbreviation immediately before or after the expanded form",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G97"
+      }
+    ]
+  },
+  {
+    "id": "PDF9",
+    "title": "Providing headings by marking content with heading tags in PDF documents",
+    "applicability": "Tagged PDF documents with headingsThis technique relates to:",
+    "successCriterion": [
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships",
+        "title": "Info and Relationships",
+        "section": "1.3.1",
+        "status": "Sufficient when used with an unwritten technique"
+      },
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/bypass-blocks",
+        "title": "Bypass Blocks",
+        "section": "2.4.1",
+        "status": "Sufficient when used with an unwritten technique"
+      }
+    ],
+    "description": [
+      "The purpose of this technique is to show how headings in PDF documents can be marked so that they are recognized by assistive technologies. Headings are marked up using the heading elements (H, H1, H2, ... H6) in the structure tree. This is typically accomplished by using a tool for authoring PDF.",
+      "Heading markup can be used:",
+      "Because headings indicate the start of important sections of content, it is possible for assistive technology users to access the list of headings and to jump directly to the appropriate heading and begin reading the content. This ability to \"skim\" the content through the headings and go directly to content of interest significantly speeds interaction for users who would otherwise access the content slowly."
+    ],
+    "techniques": [
+      {
+        "id": "G141",
+        "title": "Organizing a page using headings",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G141"
+      }
+    ]
+  },
+  {
+    "id": "PDF10",
+    "title": "Providing labels for interactive form controls in PDF documents",
+    "applicability": "This technique relates to:",
+    "successCriterion": [
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships",
+        "title": "Info and Relationships",
+        "section": "1.3.1",
+        "status": "Sufficient when used with an unwritten technique"
+      },
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/labels-or-instructions",
+        "title": "Labels or Instructions",
+        "section": "3.3.2",
+        "status": "Sufficient"
+      },
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/name-role-value",
+        "title": "Name, Role, Value",
+        "section": "4.1.2",
+        "status": "Sufficient when used with G135: Using the accessibility API features of a technology to expose names and notification\n                     of changes"
+      }
+    ],
+    "description": [
+      "The objective of this technique is to ensure that users of assistive technology are able to perceive form control labels and understand how form controls are used.",
+      "Form controls allow users to interact with a PDF document by filling in information or indicating choices which can then be submitted for processing. Assistive technology users must be able to recognize and understand the form fields, make selections, and provide input to complete the forms, and submit the form, just as sighted users can. Understandable labels that convey the purpose of each form control are essential to form accessibility.",
+      "Form inputs generally have labels and instructions to help users understand what information is required and how to fill in the form. Unless these labels are programmatically associated with the relevant fields, assistive technology might not be able to associate them correctly, and thus users might not understand how to complete the form.",
+      "Using Adobe Acrobat Pro with documents with interactive forms, you can make sure that the forms are accessible and usable by making sure that programmatically associated labels that convey the purpose of the fields are provided.",
+      "The heuristics used by assistive technology will sometimes use the text label if a programmatically associated label cannot be found. The TU entry (which is the tooltip) of the field dictionary is the programmatically associated label (see Example 3 below and Table 220 in PDF 1.7 (ISO 32000-1)). Therefore, add a tooltip to each field to provide a label that assistive technology can interpret.",
+      "The table below lists the placement rules governing where Adobe LiveCycle positions labels by default. Note that these rules assume left-to-right text directionality. If your form requires different positioning (e.g., to accommodate PDF documents in languages that use right-to-left text directionality), see Repositioning form labels in Example 2 below. In general, authors should review label positioning to make sure it meets the requirements of their particular form."
+    ],
+    "techniques": [
+      {
+        "id": "G131",
+        "title": "Providing descriptive labels",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G131"
+      },
+      {
+        "id": "G162",
+        "title": "Positioning labels to maximize predictability of relationships",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G162"
+      },
+      {
+        "id": "PDF23",
+        "title": "Providing interactive form controls in PDF documents",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF23"
+      },
+      {
+        "id": "PDF5",
+        "title": "Indicating required form controls in PDF forms",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF5"
+      },
+      {
+        "id": "PDF22",
+        "title": "Indicating when user input falls outside the required format or values in PDF forms",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF22"
+      }
+    ]
+  },
+  {
+    "id": "PDF11",
+    "title": "Providing links and link text using the Link annotation and the /Link structure element\n         in PDF documents\n      ",
+    "applicability": "PDF documents that contain linksThis technique relates to:",
+    "successCriterion": [
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships",
+        "title": "Info and Relationships",
+        "section": "1.3.1",
+        "status": "Sufficient when used with an unwritten technique"
+      },
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/keyboard",
+        "title": "Keyboard",
+        "section": "2.1.1",
+        "status": "Sufficient when used with an unwritten technique"
+      },
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context",
+        "title": "Link Purpose",
+        "section": "2.4.4",
+        "status": "Sufficient when used with G91: Providing link text that describes the purpose of a link"
+      },
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only",
+        "title": "Link Purpose",
+        "section": "2.4.9",
+        "status": "Sufficient when used with an unwritten technique"
+      }
+    ],
+    "description": [
+      "The purpose of this technique is to show how link text in PDF documents can be marked up to be recognizable by keyboard and assistive technology users. That is, the link information is programmatically available to user agents so that links are recognizable when presented in a different format. This is typically accomplished by using a tool for authoring PDF.",
+      "Links in PDF documents are represented by a Link tag and objects in its sub-tree, consisting of a link object reference (or Link annotation) and one or more text objects. The text object or objects inside the Link tag are used by assistive technologies to provide a name for the link.",
+      "The simplest way to provide links that comply with the WCAG success criteria is to create them when authoring the document, before conversion to PDF.",
+      "However, in some cases, it may not be possible to create the links using the original authoring tool. In these cases, Adobe Acrobat Pro can be used to create the link. But, because the tooltip created using the Link dialog in Adobe Acrobat Pro is not accessible to screen readers, be sure that the link text or the link context makes the purpose clear.",
+      "In all cases, link purpose should be made clear as described in the general techniques:"
+    ],
+    "techniques": [
+      {
+        "id": "G53",
+        "title": "Identifying the purpose of a link using link text combined with the text of the enclosing sentence",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G53"
+      },
+      {
+        "id": "G91",
+        "title": "Providing link text that describes the purpose of a link",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G91"
+      },
+      {
+        "id": "PDF13",
+        "title": "Providing replacement text using the /Alt entry for links in PDF documents",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF13"
+      }
+    ]
+  },
+  {
+    "id": "PDF12",
+    "title": "Providing name, role, value information for form fields in PDF documents",
+    "applicability": "Tagged PDF documents with interactive form fields. This technique relates to:",
+    "successCriterion": [
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships",
+        "title": "Info and Relationships",
+        "section": "1.3.1",
+        "status": "Sufficient when used with an unwritten technique"
+      },
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/name-role-value",
+        "title": "Name, Role, Value",
+        "section": "4.1.2",
+        "status": "Sufficient when used with G135: Using the accessibility API features of a technology to expose names and notification\n                     of changes"
+      }
+    ],
+    "description": [
+      "The objective of this technique is to ensure that assistive technologies can gather information about and interact with form controls in PDF content.",
+      "The types of PDF form controls are: text input field, check box, radio button, combo box, list box, and button.",
+      "Providing name, role, state, and value information for all form components enables compatibility with assistive technology, such as screen readers, screen magnifiers, and speech recognition software used by people with disabilities.",
+      "The PDF specification defines how name, role, and value are set for form controls in Section 12.7.4 (Field Types) of PDF 1.7 (ISO 32000-1), as shown in the following table. The Comments column explains how Adobe Acrobat Pro displays the corresponding information.",
+      "The following table describes how the role, name, value, and state are defined for PDF form controls created using Adobe Acrobat Pro. Adobe LiveCycle Designer provides the same controls as well as several additional ones: see Example 2 below."
+    ],
+    "techniques": [
+      {
+        "id": "PDF23",
+        "title": "Providing interactive form controls in PDF documents",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF23"
+      },
+      {
+        "id": "PDF5",
+        "title": "Indicating required form controls in PDF forms",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF5"
+      },
+      {
+        "id": "PDF22",
+        "title": "Indicating when user input falls outside the required format or values in PDF forms",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF22"
+      }
+    ]
+  },
+  {
+    "id": "PDF13",
+    "title": "Providing replacement text using the /Alt entry for links in PDF\n         \t\t\tdocuments\n      ",
+    "applicability": "Tagged PDF documents that contain links. This technique relates to:",
+    "successCriterion": [
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context",
+        "title": "Link Purpose",
+        "section": "2.4.4",
+        "status": "Sufficient when used with G91: Providing link text that describes the purpose of a link"
+      },
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-link-only",
+        "title": "Link Purpose",
+        "section": "2.4.9",
+        "status": "Sufficient when used with an unwritten technique"
+      }
+    ],
+    "description": [
+      "The objective of this technique is to provide replacement link text via the /Alt entry in the property list for a tag. This is usually not necessary, but in some situations, additional information beyond the visible link text is needed, particularly for screen reader users. Screen readers can read visible link text, but replacing the screen text with meaningful alternate text for links in a PDF document can make links more accessible.",
+      "Links in PDF documents are represented by a Link tag and objects in its sub-tree, consisting of a link object reference (or Link annotation) and one or more text objects. The text object or objects inside the Link tag are used by assistive technologies to provide a name for the link.",
+      "Authors can replace the default link text by providing an /Alt entry for the Link tag. When the Link tag has an /Alt entry, screen readers ignore the value of any visible text objects in the Link tag and use the /Alt entry value for the link text.",
+      "The simplest way to provide context-independent link text that complies with the WCAG 2.0 success criteria is to create them when authoring the document, before conversion to PDF. In some cases, it may not be possible to create the links using the original authoring tool. When editing PDF documents with Adobe Acrobat Pro, the best way to create accessible links is to use the Create Link command.",
+      "Authors should make sure that the alternate text makes sense in context of the screen text before and after the link."
+    ],
+    "techniques": [
+      {
+        "id": "G53",
+        "title": "Identifying the purpose of a link using link text combined with the text of the enclosing sentence",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G53"
+      },
+      {
+        "id": "G91",
+        "title": "Providing link text that describes the purpose of a link",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G91"
+      },
+      {
+        "id": "G149",
+        "title": "Using user interface components that are highlighted by the user agent when they receive focus",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G149"
+      },
+      {
+        "id": "PDF11",
+        "title": "Providing links and link text using the Link annotation and the /Link structure element in PDF documents",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF11"
+      }
+    ]
+  },
+  {
+    "id": "PDF14",
+    "title": "Providing running headers and footers in PDF documents",
+    "applicability": "Tagged PDF documentsThis technique relates to:",
+    "successCriterion": [
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/location",
+        "title": "Location",
+        "section": "2.4.8",
+        "status": "Advisory"
+      },
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/consistent-navigation",
+        "title": "Consistent Navigation",
+        "section": "3.2.3",
+        "status": "Advisory"
+      }
+    ],
+    "description": [
+      "The objective of this technique is to help users locate themselves in a document by providing running headers and footers via pagination artifacts. This is normally accomplished using a tool for authoring PDF.",
+      "Running headers and footers help make content easier to use and understandable by providing repeated information in a consistent and predictable way. The content of headers and footers will vary widely depending on the document scope and content, the audience, and design decisions. Some examples of location information that may be used in headers and footers are listed below. Whether the information appears in a header or a footer is often a design decision; page numbers often appear in footers but they may alternatively appear in headers.",
+      "Consistency helps users with cognitive limitations, screen-reader users and low-vision magnifier users, and users with intellectual disabilities understand content more readily.",
+      "The easiest way to provide page headers and footers is in the authoring tool for the document. Authoring tools typically provide features for creating header and footer text and information (such as page numbers). However, if after converting your document to PDF, you need to add or modify page headers and footers, authoring or repair tools like Adobe Acrobat Pro's Header & Footer tools can be used. In all cases, the tools generate page headers and footers in consistent and predictable layout, format, and text."
+    ],
+    "techniques": [
+      {
+        "id": "G61",
+        "title": "Presenting repeated components in the same relative order each time they appear",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G61"
+      },
+      {
+        "id": "PDF9",
+        "title": "Providing headings by marking content with heading tags in PDF documents",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF9"
+      },
+      {
+        "id": "PDF2",
+        "title": "Creating bookmarks in PDF documents",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF2"
+      }
+    ]
+  },
+  {
+    "id": "PDF15",
+    "title": "Providing submit buttons with the submit-form action in PDF forms",
+    "applicability": "Tagged PDF documents with forms. This technique relates to Success Criterion 3.2.2: On Input (Sufficient when used with G80: Providing a submit button to initiate a change of context).\n            ",
+    "successCriterion": [
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/on-input",
+        "title": "On InputG80",
+        "section": "3.2.2",
+        "status": "Sufficient when used with G80: Providing a submit button to initiate a change of context"
+      }
+    ],
+    "description": [
+      "The objective of this technique is to provide a mechanism that allows users to explicitly request a change of context using the submit-form action in a PDF form. The intended use of a submit button is to generate an HTTP request that submits data entered in a form, so it is an appropriate control to use for causing a change of context. In PDF documents, submit buttons are normally implemented using a tool for authoring PDF.",
+      "Examples 1 and 2 demonstrate how to add a submit button using specific authoring tools. There are other PDF tools that perform similar functions. Check the functionality provided by ."
+    ],
+    "techniques": [
+      {
+        "id": "G80",
+        "title": "Providing a submit button to initiate a change of context",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G80"
+      },
+      {
+        "id": "PDF23",
+        "title": "Providing interactive form controls in PDF documents",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF23"
+      },
+      {
+        "id": "PDF12",
+        "title": "Providing name, role, value information for form fields in PDF documents",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF12"
+      }
+    ]
+  },
+  {
+    "id": "PDF16",
+    "title": "Setting the default language using the /Lang entry in the document\n         \t\t\tcatalog of a PDF document\n      ",
+    "applicability": "Tagged PDF documentsThis technique relates to Success Criterion 3.1.1: Language of Page (Sufficient).\n            ",
+    "successCriterion": [
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/language-of-page",
+        "title": "Language of Page",
+        "section": "3.1.1",
+        "status": "Sufficient"
+      }
+    ],
+    "description": [
+      "The objective of this technique is to specify a document's default language by setting the /Lang entry in the document catalog. This is normally accomplished using a tool for authoring PDF.",
+      "Both assistive technologies and conventional user agents can render text more accurately when the language of the document is identified. Screen readers can load the correct pronunciation rules. Visual browsers can display characters and scripts correctly. Media players can show captions correctly. As a result, users with disabilities are better able to understand the content."
+    ],
+    "techniques": [
+      {
+        "id": "PDF19",
+        "title": "Specifying the language for a passage or phrase with the Lang entry in PDF documents",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF19"
+      }
+    ]
+  },
+  {
+    "id": "PDF17",
+    "title": "Specifying consistent page numbering for PDF documents",
+    "applicability": "Tagged PDF documentsThis technique relates to:",
+    "successCriterion": [
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships",
+        "title": "Info and Relationships",
+        "section": "1.3.1",
+        "status": "Sufficient when used with an unwritten technique"
+      },
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/location",
+        "title": "Location",
+        "section": "2.4.8",
+        "status": "Advisory"
+      },
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/consistent-navigation",
+        "title": "Consistent Navigation",
+        "section": "3.2.3",
+        "status": "Advisory"
+      }
+    ],
+    "description": [
+      "The objective of this technique is to help users locate themselves in a document by ensuring that the page numbering displayed in the PDF viewer page controls has the same page numbering as the document. For example, Adobe Acrobat Pro and Reader display page numbers in the Page Navigation toolbar. The page number format is specified by the /PageLabels entry in the Document Catalog.",
+      "Many documents use specific page number formats within a document. Commonly, front matter is numbered with lowercase Roman numerals. The main content, starting on the page numbered 1, may actually be the fifth or sixth page in the document. Similarly, appendices may begin with page number 1 plus a prefix of the appendix letter (e.g., \"A-1\").",
+      "Authors should make sure that the page numbering of their converted documents is reflected in any page number displays in their user agent. Consistency in presenting the document's page numbers will help make navigating the document more predictable and understandable.",
+      "As an example, if /PageLabels has not been provided to describe the page number formatting, the page numbering scheme will not be reflected in the Page Navigation toolbar in Adobe Acrobat Pro or Reader. This toolbar displays the page number in a text box, which users can change to move to another page. In addition, users can select the arrows to move one page up or down in the document. The toolbar also displays the relative page number location. In the image below, the default display indicates the user is on page 1 of 4 pages.",
+      "A more direct way of going to a page is to use the shortcut for the View > Page Navigation > Page menu item. On Windows, this shortcut is \"Ctrl + Shift + N\"; on Mac OS, it is \"Cmd + Shift + N\". This brings up a dialog box to go to a specific page number."
+    ],
+    "techniques": [
+      {
+        "id": "PDF14",
+        "title": "Providing running headers and footers in PDF documents",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF14"
+      }
+    ]
+  },
+  {
+    "id": "PDF18",
+    "title": "Specifying the document title using the Title entry in the document\n         \t\t\tinformation dictionary of a PDF document\n      ",
+    "applicability": "Tagged PDF documentsThis technique relates to Success Criterion 2.4.2: Page Titled (Sufficient when used with G88: Providing descriptive titles for Web pages).\n            ",
+    "successCriterion": [
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/page-titled",
+        "title": "Page TitledG88",
+        "section": "2.4.2",
+        "status": "Sufficient when used with G88: Providing descriptive titles for Web pages"
+      }
+    ],
+    "description": [
+      "The intent of this technique is to show how a descriptive title for a PDF document can be specified for assistive technology by using the /Title entry in the document information dictionary and by setting the DisplayDocTitle flag to True in a viewer preferences dictionary. This is typically accomplished by using a tool for authoring PDF.",
+      "Document titles identify the current location without requiring users to read or interpret page content. User agents make the title of the page easily available to the user for identifying the page. For instance, a user agent may display the page title in the window title bar or as the name of the tab containing the page."
+    ],
+    "techniques": [
+      {
+        "id": "G88",
+        "title": "Providing descriptive titles for Web pages",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G88"
+      }
+    ]
+  },
+  {
+    "id": "PDF19",
+    "title": "Specifying the language for a passage or phrase with the Lang entry\n         \t\t\tin PDF documents\n      ",
+    "applicability": "Tagged PDF documentsThis technique relates to:",
+    "successCriterion": [
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/language-of-page",
+        "title": "Language of Page",
+        "section": "3.1.1",
+        "status": "Sufficient"
+      },
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/language-of-parts",
+        "title": "Language of Parts",
+        "section": "3.1.2",
+        "status": "Sufficient"
+      }
+    ],
+    "description": [
+      "The objective of this technique is to specify the language of a passage, phrase, or word using the /Lang entry to provide information in the PDF document that user agents need to present text and other linguistic content correctly. This is normally accomplished using a tool for authoring PDF.",
+      "Both assistive technologies and conventional user agents can render text more accurately when the language is identified. Screen readers can load the correct pronunciation rules.     As a result, users with disabilities are better able to understand the content.",
+      "This technique can be used to set the default language for the entire document if the entire document is contained in the container or tag. In this case, this technique would apply to Success Criterion 3.1.1."
+    ],
+    "techniques": [
+      {
+        "id": "PDF16",
+        "title": "Setting the default language using the /Lang entry in the document catalog of a PDF document",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF16"
+      }
+    ]
+  },
+  {
+    "id": "PDF20",
+    "title": "Using Adobe Acrobat Pro's Table Editor to repair mistagged tables",
+    "applicability": "Tagged PDF documents with tables.This technique relates to Success Criterion 1.3.1: Info and Relationships (Sufficient when used with an unwritten technique).\n            ",
+    "successCriterion": [
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships",
+        "title": "Info and Relationships",
+        "section": "1.3.1",
+        "status": "Sufficient when used with an unwritten technique"
+      }
+    ],
+    "description": [
+      "The purpose of this technique is to show how table cells in PDF documents can be marked up so that the logical relationships among rows and columns are preserved and recognized by assistive technology. This is typically accomplished by using a tool for authoring PDF.",
+      "However, tables converted to PDF may have incorrectly merged or split table cells, even if they were marked up correctly in the authoring tool. Authors can ensure that table cells are structured properly by using the Table Editor in Adobe Acrobat Pro's TouchUp Reading Order tool."
+    ],
+    "techniques": [
+      {
+        "id": "H51",
+        "title": "Using table markup to present tabular information",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/html/H51"
+      },
+      {
+        "id": "PDF6",
+        "title": "Using table elements for table markup in PDF Documents",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF6"
+      }
+    ]
+  },
+  {
+    "id": "PDF21",
+    "title": "Using List tags for lists in PDF documents",
+    "applicability": "Tagged PDF documents with lists.This technique relates to Success Criterion 1.3.1: Info and Relationships (Sufficient when used with an unwritten technique).\n            ",
+    "successCriterion": [
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/info-and-relationships",
+        "title": "Info and Relationships",
+        "section": "1.3.1",
+        "status": "Sufficient when used with an unwritten technique"
+      }
+    ],
+    "description": [
+      "The intent of this technique is to create lists of related items using list elements appropriate for their purposes. PDF files containing lists are normally created or repaired using a tool for authoring PDF.",
+      "When markup is used that visually formats items as a list but does not indicate the list relationship, users may have difficulty navigating the information. An example of such visual formatting is simply using line-breaks to separate list items.",
+      "Some assistive technologies allow users to navigate from list to list or item to item. If the lists are not correctly formatted with list tags, these users will have difficulty understanding the list content.",
+      "The easiest way to create lists in PDF content is to format them properly using list markup in the authoring tool, for example, Microsoft Word or OpenOffice.org Writer. However, if you do not have access to the source file and authoring tool, you can use Acrobat Pro's TouchUp Reading Order tool and the Tags panel.",
+      "The PDF specification defines list structure in section 14.8.4.3.3 (List Elements). The structure types for lists in PDF documents are:"
+    ],
+    "techniques": [
+      {
+        "id": "G115",
+        "title": "Using semantic elements to mark up structure",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G115"
+      }
+    ]
+  },
+  {
+    "id": "PDF22",
+    "title": "Indicating when user input falls outside the required format or\n         \t\t\tvalues in PDF forms\n      ",
+    "applicability": "Tagged PDF documentsThis technique relates to:",
+    "successCriterion": [
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/error-identification",
+        "title": "Error Identification",
+        "section": "3.3.1",
+        "status": "Sufficient"
+      },
+      {
+        "url": "https://www.w3.org/WAI/WCAG21/Understanding/error-suggestion",
+        "title": "Error Suggestion",
+        "section": "3.3.3",
+        "status": "Sufficient"
+      }
+    ],
+    "description": [
+      "The objective of this technique is to notify the user when user input to a field that requires a specific, required format (e.g., date fields) is not submitted in that format.",
+      "If the required format is not used, an alert dialog describes the nature of the error in text. This may be accomplished through scripting created by the author (see, for example, SCR18: Providing client-side validation and alert). User agents, such as Adobe LiveCycle can provide automatic alerts (as described in the examples below).",
+      "Once the user dismisses the alert dialog, it may be helpful if the script positions the keyboard focus on the field where the error occurred, although some users may expect the focus to remain on the last control focused prior to the alert appearing. Authors should exercise care to ensure that any movement of the focus will be expected. For example, if the alert announces an error in a phone number format, positioning the focus on the phone number field when the alert is dismissed can be regarded as helpful and expected. In some cases, however, this may not be possible. If multiple input errors occur on the page, an alternative approach to error notification should be implemented.",
+      "Ensuring that users are aware an error has occurred, can determine what is wrong, and can correct it are key to software usability and accessibility. Meeting this objective helps ensure that all users can complete for-based transactions with ease and confidence.",
+      "It is also important that users are aware that an error may occur. You can incorporate this information in labels; for example, \"Date (MM/DD/YYYY).\" See ."
+    ],
+    "techniques": [
+      {
+        "id": "G89",
+        "title": "Providing expected data format and example",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/general/G89"
+      },
+      {
+        "id": "SCR18",
+        "title": "Providing client-side validation and alert",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/client-side-script/SCR18"
+      },
+      {
+        "id": "PDF23",
+        "title": "Providing interactive form controls in PDF documents",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF23"
+      },
+      {
+        "id": "PDF10",
+        "title": "Providing labels for interactive form controls in PDF documents",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF10"
+      },
+      {
+        "id": "PDF5",
+        "title": "Indicating required form controls in PDF forms",
+        "url": "https://www.w3.org/WAI/WCAG21/Techniques/pdf/PDF5"
+      }
+    ]
+  }
+]
